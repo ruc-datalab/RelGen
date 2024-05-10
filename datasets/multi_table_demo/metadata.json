@@ -1,0 +1,66 @@
+{
+  "tables": {
+    "table1": {
+      "columns": {
+        "id1": {
+          "type": "id"
+        },
+        "name1": {
+          "type": "categorical"
+        },
+        "age1": {
+          "type": "numerical"
+        },
+        "id12": {
+          "type": "id"
+        },
+        "id13": {
+          "type": "id"
+        }
+      },
+      "primary_key": "id1"
+    },
+    "table2": {
+      "columns": {
+        "id21": {
+          "type": "id"
+        },
+        "name2": {
+          "type": "categorical"
+        },
+        "age2": {
+          "type": "numerical"
+        }
+      },
+      "primary_key": "id21"
+    },
+    "table3": {
+      "columns": {
+        "id31": {
+          "type": "id"
+        },
+        "name3": {
+          "type": "categorical"
+        },
+        "age3": {
+          "type": "numerical"
+        }
+      },
+      "primary_key": "id31"
+    }
+  },
+  "relationships": [
+    {
+      "parent_table_name": "table1",
+      "child_table_name": "table2",
+      "parent_foreign_key": "id12",
+      "child_primary_key": "id21"
+    },
+    {
+      "parent_table_name": "table1",
+      "child_table_name": "table3",
+      "parent_foreign_key": "id13",
+      "child_primary_key": "id31"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "tables": {
+    "student": {
+      "columns": {
+        "id": {
+          "type": "id"
+        },
+        "name": {
+          "type": "categorical"
+        },
+        "age": {
+          "type": "numerical"
+        }
+      },
+      "primary_key": "id"
+    }
+  }
+}
