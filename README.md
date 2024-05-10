@@ -44,7 +44,7 @@ This requires NVIDIA driver version >= 396.26 (for Linux) or >= 397.44 (for Wind
 
 ### Install from source
 ```bash
-git clone https://github.com/rucdatalab/RelGen.git && cd RelGen
+git clone https://github.com/ruc-datalab/RelGen.git && cd RelGen
 pip install -r requirements.txt
 ```
 
