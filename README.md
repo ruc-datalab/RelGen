@@ -25,14 +25,12 @@ RelGen uses a variety of advanced deep generative models and algorithms to learn
 </p>
 
 ## Features
-**Generate relational data using deep generative models.** RelGen provides a variety of deep generative models, 
-including Generative Adversarial Network (GAN), Autoregressive Model (AR Model) and Diffusion Model.
+* ✨ **Rich data preprocessing methods.** RelGen provides a variety of data preprocessing methods for relational data to improve the effect of relational data generation.
 
-**Generate data for multiple relational tables.** RelGen can flexibly generate data for multiple relational tables in the database, 
-so that the data distribution of each generated table is close to that of the original table, and the joined table can also be similar to the original joined table.
+* ✨ **Advanced relational data generation models and algorithms.** RelGen provides users with a variety of deep generative models to choose from, and uses effective relational data generation algorithms to generate high-quality relational data.
 
-**Evaluate the quality of generated relational data.** RelGen evaluates the generated relational data in terms of fidelity, privacy, and diversity, 
-and visualizes the quality of the generated relational data using histogram and t-SNE plot.
+* ✨ **Comprehensive quality evaluation for generated relational data.** RelGen comprehensively evaluates the quality of generated relational data from multiple dimensions, 
+and visualizes the difference between real relational data and generated relational data.
 
 ## Installation
 RelGen requires Python version 3.7 or later.
