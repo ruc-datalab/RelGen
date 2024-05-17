@@ -15,7 +15,7 @@ warnings.filterwarnings('ignore')
 parser = argparse.ArgumentParser()
 parser.add_argument('--dir', type=str)
 parser.add_argument('--synthesizer', type=str, choices=["made", "relddpm"], default="made")
-parser.add_argument('--method', type=str, choices=["single_model", "multi_model"], default="multi_model")
+parser.add_argument('--method', type=str, choices=["single_model", "multi_model"], default="single_model")
 args = parser.parse_args()
 
 data_dir = args.dir
@@ -35,10 +35,10 @@ dataset.fit(data)
 synthesis_method_map = {"single_model": SynthesisMethod.SINGLE_MODEL, "multi_model": SynthesisMethod.MULTI_MODEL}
 synthesizer_map = {
     "made": MADESynthesizer(dataset, method=synthesis_method_map[args.method]),
-    "relddpm": RelDDPMSynthesizer(dataset, method=synthesis_method_map[args.method])
+    "relddpm": RelDDPMSynthesizer(dataset)
 }
 synthesizer = synthesizer_map[args.synthesizer]
-synthesizer.fit(data)
+synthesizer.fit(data, epochs=10)
 # 5. 合成数据
 sampled_data = synthesizer.sample()
 for table_name, table_data in sampled_data.items():
