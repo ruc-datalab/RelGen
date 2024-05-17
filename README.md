@@ -7,6 +7,7 @@
 [![Unit Tests](https://github.com/ruc-datalab/RelGen/actions/workflows/unit.yml/badge.svg)](https://github.com/ruc-datalab/RelGen/actions/workflows/unit.yml)
 [![E2E Tests](https://github.com/ruc-datalab/RelGen/actions/workflows/e2e.yml/badge.svg)](https://github.com/ruc-datalab/RelGen/actions/workflows/e2e.yml)
 [![Colab](https://img.shields.io/badge/Tutorials-Try%20now!-orange?logo=googlecolab)](https://github.com/ruc-datalab/RelGen/blob/main/tutorial/census_synthesis.ipynb)
+[![PyPi Latest Release](https://img.shields.io/pypi/v/relgen)](https://pypi.org/project/relgen/)
 [![License](https://img.shields.io/badge/License-Apache2.0-blue.svg)](./LICENSE)
 
 **RelGen** is the abbreviation of **Rel**ation **Gen**eration. This tool is used to generate relational data in databases. 
@@ -36,11 +37,11 @@ and visualizes the quality of the generated relational data using histogram and 
 ## Installation
 RelGen requires Python version 3.7 or later.
 
-RelGen requires torch version 1.7.0 or later. If you want to use RelGen with GPU,
-please ensure that CUDA or cudatoolkit version is 9.2 or later.
-This requires NVIDIA driver version >= 396.26 (for Linux) or >= 397.44 (for Windows10).
+### Install from pip
 
-### Install from conda
+```bash
+pip install relgen
+```
 
 ### Install from source
 ```bash

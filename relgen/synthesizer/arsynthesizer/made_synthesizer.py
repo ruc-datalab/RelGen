@@ -17,12 +17,27 @@ from relgen.synthesizer.arsynthesizer import ARSynthesizer
 
 
 class MADESynthesizer(ARSynthesizer):
+    """Synthesizer Class is used to manage the training and sampling processes of models.
+    MADESynthesizer is synthesizer class using MADE models.
+    """
     def __init__(self, dataset: Dataset, models: Dict[str, MADE] = {}, method: SynthesisMethod = SynthesisMethod.MULTI_MODEL):
         super(MADESynthesizer, self).__init__(dataset)
         self.models = models
         self.method = method
 
     def fit(self, data: Dict[str, pd.DataFrame], device=torch.device("cpu"), condition=None, epochs: int = 100, batch_size: int = 1024, verbose: bool = True, show_progress: bool = False):
+        """
+        Use data to train synthesizer.
+
+        Args:
+            data (Dict): A dict that key is table name and value is table dataframe.
+            device (torch.Device): Device used to train the synthesizer.
+            condition (any): Condition used to train the synthesizer.
+            epochs (int): Epochs of training.
+            batch_size (int): Batch size of training.
+            verbose (bool): Whether to write training information to logger. Defaults to ``True``.
+            show_progress (bool): Show the progress of training epoch. Defaults to ``False``.
+        """
         sorted_relationships = self.dataset.metadata.sorted_relationships
         if self.method == SynthesisMethod.MULTI_MODEL:
             for relationship in sorted_relationships:
@@ -117,6 +132,16 @@ class MADESynthesizer(ARSynthesizer):
         return total_loss / len(iter_data)
 
     def sample(self, condition=None, device=torch.device("cpu")) -> Dict[str, pd.DataFrame]:
+        """
+        Use synthesizer to sample data.
+
+        Args:
+            condition (any): Condition used to sample data.
+            device (torch.Device): Device used to sample data.
+
+        Returns:
+            sampled_data (Dict): A dict that key is table name and value is table dataframe.
+        """
         sorted_relationships = self.dataset.metadata.sorted_relationships
         sampled_results = {}
         if self.method == SynthesisMethod.MULTI_MODEL:
@@ -168,6 +193,12 @@ class MADESynthesizer(ARSynthesizer):
         return sampled_results
 
     def save(self, save_path: str):
+        """
+        Save models.
+
+        Args:
+            save_path (str): save path of models.
+        """
         state = {
             "models": {}
         }
@@ -176,6 +207,13 @@ class MADESynthesizer(ARSynthesizer):
         torch.save(state, save_path)
 
     def load(self, load_path: str, device=torch.device("cpu")):
+        """
+        Load models.
+
+        Args:
+            load_path (str): load path of models.
+            device (torch.Device): Device of loading models.
+        """
         checkpoint = torch.load(load_path, map_location=device)
         for table in self.models.keys():
             self.models[table].load_state_dict(checkpoint["models"][table])

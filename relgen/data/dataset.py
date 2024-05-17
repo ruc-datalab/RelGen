@@ -8,6 +8,7 @@ from relgen.data.table import Table
 
 
 class Dataset:
+    """Dataset class."""
     def __init__(self, metadata: Metadata, num_column: Column = DiscreteColumn(), cat_column: Column = OrdinalColumn()):
         self.metadata = metadata
         self.num_column = num_column
@@ -18,17 +19,37 @@ class Dataset:
         self.is_fitted = False
 
     def fit(self, data: Dict[str, pd.DataFrame]):
+        """Use data to fit dataset.
+
+        Args:
+            data (Dict): A dict that key is table name and value is table dataframe.
+        """
         self.is_fitted = True
         for table_name, table_data in data.items():
             self.tables[table_name].fit(table_data)
 
     def transform(self, data: Dict[str, pd.DataFrame]) -> Dict[str, torch.Tensor]:
+        """
+        Transform the given tables to the continuous vectors.
+
+        Args:
+            data (Dict): A dict that key is table name and value is table dataframe.
+        """
         transformed_data = {}
         for table_name, table_data in data.items():
             transformed_data[table_name] = self.tables[table_name].transform(data[table_name])
         return transformed_data
 
     def inverse(self, data: Dict[str, torch.Tensor]) -> Dict[str, pd.DataFrame]:
+        """
+        Inverse the transformed vectors to the original tables.
+
+        Args:
+            data (Dict): A dict that key is table name and value is table tensor.
+
+        Returns:
+            inverse_data(numpy.array): The original tabular data inversed from the vectors.
+        """
         inverse_data = {}
         for table_name, table_data in data.items():
             inverse_data[table_name] = self.tables[table_name].inverse(data[table_name])

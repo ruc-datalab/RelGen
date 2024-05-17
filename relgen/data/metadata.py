@@ -6,6 +6,7 @@ from relgen.data.utils import read_json
 
 
 class Metadata:
+    """Table Metadata class."""
     def __init__(self):
         self.tables = {}
         self.relationships = []
@@ -17,6 +18,15 @@ class Metadata:
         return f"tables:{newline}{self.tables}{newline}relationships:{newline}{self.relationships}"
 
     def load_from_dict(self, metadata_dict: Dict[str, Any]):
+        """Create a ``Metadata`` instance from a python ``dict``.
+
+        Args:
+            metadata_dict (dict):
+                Python dictionary representing a ``Metadata`` object.
+
+        Returns:
+            Instance of ``Metadata``.
+        """
         self.tables = metadata_dict["tables"]
         if "relationships" in metadata_dict:
             self.relationships = metadata_dict["relationships"]
@@ -25,6 +35,15 @@ class Metadata:
         self._validate_relationships()
 
     def load_from_json(self, filepath):
+        """Create a ``Metadata`` instance from a ``json`` file.
+
+        Args:
+            filepath (str):
+                String that represents the ``path`` to the ``json`` file.
+
+        Returns:
+            A ``Metadata`` instance.
+        """
         metadata = read_json(filepath)
         return self.load_from_dict(metadata)
 

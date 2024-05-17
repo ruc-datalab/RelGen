@@ -21,6 +21,7 @@ import tqdm
 
 
 class Evaluator:
+    """Evaluator class for evaluating the quality of generated data."""
     def __init__(
             self,
             real_data: pd.DataFrame,
@@ -35,6 +36,12 @@ class Evaluator:
         self.test_data = test_data
 
     def eval_fidelity(self, save_path: str = None):
+        """
+        Evaluate fidelity of generated data.
+
+        Args:
+            save_path (str): save path of fidelity metrics.
+        """
         dist = self._distance()
         diff_corr = self._diff_corr()
         disc_meas = self._dm()
@@ -46,6 +53,12 @@ class Evaluator:
         return ret_dict
 
     def eval_privacy(self, precision=False, save_path: str = None):
+        """
+        Evaluate privacy of generated data.
+
+        Args:
+            save_path (str): save path of privacy metrics.
+        """
         dcr = self._dcr_nndr(is_dcr=True, precision=precision)
         nndr = self._dcr_nndr(is_dcr=False, precision=precision)
         ret_dict = {**dcr, **nndr}
@@ -56,6 +69,12 @@ class Evaluator:
         return ret_dict
 
     def eval_diversity(self, precision=False, save_path: str = None):
+        """
+        Evaluate diversity of generated data.
+
+        Args:
+            save_path (str): save path of diversity metrics.
+        """
         ret_dict = self._sampling_diversity(precision=precision)
         if save_path:
             json_str = json.dumps(ret_dict)
@@ -64,6 +83,12 @@ class Evaluator:
         return ret_dict
 
     def eval_histogram(self, columns: List[str] = [], save_path: str = None):
+        """
+        Show histogram of the data distribution comparison between the original data and the generated data.
+
+        Args:
+            save_path (str): save path of histogram.
+        """
         if len(columns) == 0:
             real_data = self.real_data
             fake_data = self.fake_data
@@ -96,6 +121,12 @@ class Evaluator:
             plt.show()
 
     def eval_tsne(self, save_path: str = None):
+        """
+        Show t-SNE plot of the data distribution comparison between the original data and the generated data.
+
+        Args:
+            save_path (str): save path of t-SNE plot.
+        """
         fake_X = self.fake_data.iloc[:, :-1]
         real_X = self.real_data.iloc[:, :-1]
         real_X, fake_X = self._min_max_eu_dummies(real_X, fake_X)
