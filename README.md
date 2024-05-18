@@ -25,7 +25,7 @@ RelGen uses a variety of advanced deep generative models and algorithms to learn
 </p>
 
 ## Features
-* ✨ **Rich data preprocessing methods.** RelGen provides a variety of data preprocessing methods for relational data to improve the effect of relational data generation.
+* ✨ **Supports multiple fields and scenarios.** RelGen is suitable for a variety of scenarios, including private data release, data augmentation, database testing and so on.
 
 * ✨ **Advanced relational data generation models and algorithms.** RelGen provides users with a variety of deep generative models to choose from, and uses effective relational data generation algorithms to generate high-quality relational data.
 
