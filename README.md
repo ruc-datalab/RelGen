@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 ## Quick-Start
 
-### Load Dataset
+### Loading Dataset
 Load a demo dataset to get started. This dataset is a single table describing the census.
 
 Load metadata for the census dataset.
