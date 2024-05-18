@@ -126,3 +126,19 @@ evaluator.eval_tsne()
 <p align="center">
   <img src="asset/t-SNE.png" alt="RelGen v0.1" width="500">
 </p>
+
+## Cite
+If you find RelGen useful for your research or development, please cite the following paper: [Tabular data synthesis with generative adversarial networks: design space and optimizations](https://link.springer.com/article/10.1007/s00778-023-00807-y).
+
+```bibtex
+@article{liu2024tabular,
+  title={Tabular data synthesis with generative adversarial networks: design space and optimizations},
+  author={Liu, Tongyu and Fan, Ju and Li, Guoliang and Tang, Nan and Du, Xiaoyong},
+  journal={The VLDB Journal},
+  volume={33},
+  number={2},
+  pages={255--280},
+  year={2024},
+  publisher={Springer}
+}
+```
