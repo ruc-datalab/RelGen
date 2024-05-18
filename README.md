@@ -124,7 +124,7 @@ evaluator.eval_tsne()
 ```
 
 <p align="center">
-  <img src="asset/t-SNE.png" alt="RelGen v0.1" width="500">
+  <img src="asset/t-SNE.png" alt="RelGen v0.1" width="300">
 </p>
 
 ## Cite
