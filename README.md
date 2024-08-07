@@ -1,6 +1,7 @@
 <p align="center">
   <img src="asset/logo.png" alt="RelGen v0.1" width="500">
 </p>
+<font color='red'>换一个好看的logo </font>
 
 # RelGen
 
@@ -15,8 +16,13 @@ On the other hand, the pronunciation of **Rel** is similar to **Real**, which me
 
 ## Overview
 
+<font color='red'>介绍relgen是做什么的</font>
+
 RelGen is a Python library designed to generate real relational data for users. 
 RelGen uses a variety of advanced deep generative models and algorithms to learn data distribution from real data and generate high-quality simulation data.
+
+
+<font color='red'>图画得更好看一些</font>
 
 <p align="center">
   <img src="asset/framework.png" alt="RelGen v0.1" width="600">
@@ -48,6 +54,8 @@ pip install -r requirements.txt
 ```
 
 ## Quick-Start
+
+<font color='red'>这块可以进步的空间很大，写得更加详细一点。具体介绍如何load data generate data和evaluate synthesis data</font>
 
 ### Loading Dataset
 Load a demo dataset to get started. This dataset is a single table describing the census.
