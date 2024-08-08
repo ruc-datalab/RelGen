@@ -16,10 +16,8 @@ On the other hand, the pronunciation of **Rel** is similar to **Real**, which me
 
 ## Overview
 
-<font color='red'>介绍relgen是做什么的</font>
-
 RelGen is a Python library designed to generate real relational data for users. 
-RelGen uses a variety of advanced deep generative models and algorithms to learn data distribution from real data and generate high-quality simulation data.
+RelGen uses a variety of advanced deep generative models and algorithms to learn data distribution from real data and generate high-quality simulation data.RelGen can be applied to database system testing, data publishing and cross-domain data flow, as well as machine learning data augmentation.
 
 
 <font color='red'>图画得更好看一些</font>
