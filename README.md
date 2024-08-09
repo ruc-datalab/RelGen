@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="asset/logo.png" alt="RelGen v0.1" width="500">
+  <img src="asset/logo1.png" alt="RelGen v0.1" width="500">
 </p>
 
 # RelGen
@@ -16,12 +16,12 @@ Interestingly, the pronunciation of "Rel" closely resembles "Real," underscoring
 ## Overview
 
 RelGen is a Python library designed to generate real relational data for users. 
-RelGen uses a variety of advanced deep generative models and algorithms to learn data distribution from real data and generate high-quality simulation data. s
+RelGen uses a variety of advanced deep generative models and algorithms to learn data distribution from real data and generate high-quality simulation data.RelGen can be applied to database system testing, data publishing and cross-domain data flow, as well as machine learning data augmentation.
 
 <p align="center">
   <img src="asset/framework2.png" alt="RelGen v0.1" width="600">
   <br>
-  <b>Figure</b>: RelGen Overall Architecture
+  <b>Figure: RelGen Overall Architecture</b>
 </p>
 
 ## Features
@@ -48,8 +48,6 @@ pip install -r requirements.txt
 ```
 
 ## Quick-Start
-
-<font color='red'>这块可以进步的空间很大，写得更加详细一点。具体介绍如何load data generate data和evaluate synthesis data</font>
 
 ### Loading Dataset
 Load a demo dataset to get started. This dataset is a single table describing the census.
@@ -85,7 +83,7 @@ dataset.fit(data)
 
 ### Generating Data
 
-Train the synthesizer.
+Create MADESynthesizer instances, train the synthesizer using the fit method, and learn data structures to generate similar relational data.
 ```python
 from relgen.synthesizer.arsynthesizer import MADESynthesizer
 
@@ -93,7 +91,7 @@ synthesizer = MADESynthesizer(dataset)
 synthesizer.fit(data)
 ```
 
-Generate relational data.
+The synthesizer is now capable of generating relational data.
 ```python
 sampled_data = synthesizer.sample()
 ```
@@ -104,7 +102,7 @@ sampled_data = synthesizer.sample()
 
 ### Evaluating Data
 
-Compare real data and generated data to evaluate the quality of generated data.
+The RelGen library allows you to evaluate the relational data by comparing it to the real data. Let's start by creating an evaluator.
 ```python
 from relgen.evaluator import Evaluator
 
