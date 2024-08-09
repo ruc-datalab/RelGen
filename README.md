@@ -21,7 +21,7 @@ RelGen uses a variety of advanced deep generative models and algorithms to learn
 <p align="center">
   <img src="asset/framework2.png" alt="RelGen v0.1" width="600">
   <br>
-  <b>Figure: RelGen Overall Architecture</b>
+  <b>Figure 1: RelGen Overall Architecture</b>
 </p>
 
 ## Features
@@ -29,11 +29,10 @@ RelGen uses a variety of advanced deep generative models and algorithms to learn
 
 * ✨ **Advanced relational data generation models and algorithms.** RelGen provides users with a variety of deep generative models to choose from, and uses effective relational data generation algorithms to generate high-quality relational data.
 
-* ✨ **Comprehensive quality evaluation for generated relational data.** RelGen comprehensively evaluates the quality of generated relational data from multiple dimensions, 
-and visualizes the difference between real relational data and generated relational data.
+* ✨ **Comprehensive quality evaluation for generated relational data.** RelGen comprehensively evaluates the quality of generated relational data from multiple dimensions, and visualizes the difference between real relational data and generated relational data.
 
 ## Installation
-RelGen requires Python version 3.7 or later.
+RelGen requires Python version 3.7 or later. You can choose one of the following methods to install the relgen.
 
 ### Install from pip
 
@@ -48,11 +47,12 @@ pip install -r requirements.txt
 ```
 
 ## Quick-Start
+In this section, you will learn how to use RelGen package with a simple example. You will load a dataaset with RelGen, construct a model for data synthesis, train the model and generate data sample from it.
 
 ### Loading Dataset
-Load a demo dataset to get started. This dataset is a single table describing the census.
+Load a demo dataset to get started. This dataset is a single table describing the census. You can find this data in [census](datasets/census/).
 
-Load metadata for the census dataset.
+Load metadata for the census dataset. 
 ```python
 from relgen.data.metadata import Metadata
 
@@ -72,6 +72,10 @@ data = {
 <p align="center">
   <img src="asset/census.png" alt="RelGen v0.1">
 </p>
+
+> **Some introduciton for census datasets**
+> 
+> This data was extracted from the 1994 Census bureau database by Ronny Kohavi and Barry Becker (Data Mining and Visualization, Silicon Graphics). A set of reasonably clean records was extracted using the following conditions: ((AAGE>16) && (AGI>100) && (AFNLWGT>1) && (HRSWK>0)). The prediction task is to determine whether a person makes over $50K a year.
 
 Encapsulate the census dataset and process it.
 ```python
@@ -126,6 +130,8 @@ evaluator.eval_tsne()
 <p align="center">
   <img src="asset/t-SNE.png" alt="RelGen v0.1" width="300">
 </p>
+
+The code of Quick Start can be found in [Quick Start](QuickStart.ipynb)
 
 ## Cite
 If you find RelGen useful for your research or development, please cite the following paper: [Tabular data synthesis with generative adversarial networks: design space and optimizations](https://link.springer.com/article/10.1007/s00778-023-00807-y).
