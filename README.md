@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="asset/logo.png" alt="RelGen v0.1" width="500">
+  <img src="asset/logo1.png" alt="RelGen v0.1" width="500">
 </p>
-<font color='red'>换一个好看的logo </font>
 
 # RelGen
 
