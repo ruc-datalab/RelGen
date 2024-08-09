@@ -31,6 +31,13 @@ RelGen uses a variety of advanced deep generative models and algorithms to learn
 
 * ✨ **Comprehensive quality evaluation for generated relational data.** RelGen comprehensively evaluates the quality of generated relational data from multiple dimensions, and visualizes the difference between real relational data and generated relational data.
 
+## Architecture of this project
+| Important Link | Notes |
+| --- | --- |
+| [Tutorial](tutorial) | Contains several examples of generating database using RelGen |
+| [Package](relgen) | Contains the code implementation of the RelGen project |
+| [Docs](docs) | The documentation of this project |
+
 ## Installation
 RelGen requires Python version 3.7 or later. You can choose one of the following methods to install the relgen.
 
@@ -131,7 +138,7 @@ evaluator.eval_tsne()
   <img src="asset/t-SNE.png" alt="RelGen v0.1" width="300">
 </p>
 
-The code of Quick Start can be found in [Quick Start](QuickStart.ipynb)
+The code of Quick Start can be found in [Quick Start](QuickStart.ipynb).
 
 ## Cite
 If you find RelGen useful for your research or development, please cite the following paper: [Tabular data synthesis with generative adversarial networks: design space and optimizations](https://link.springer.com/article/10.1007/s00778-023-00807-y).
