@@ -24,7 +24,7 @@ RelGen uses a variety of advanced deep generative models and algorithms to learn
 <p align="center">
   <img src="asset/framework.png" alt="RelGen v0.1" width="600">
   <br>
-  <b>Figure</b>: RelGen Overall Architecture
+  <b>Figure: RelGen Overall Architecture</b>
 </p>
 
 ## Features
