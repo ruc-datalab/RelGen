@@ -34,9 +34,9 @@ RelGen uses a variety of advanced deep generative models and algorithms to learn
 ## Architecture of this project
 | Important Link | Notes |
 | --- | --- |
-| :orange_book:[Tutorial](tutorial) | Contains several examples of generating database using RelGen |
-| [Package](relgen) | Contains the code implementation of the RelGen project |
-| [Docs](docs) | The documentation of this project |
+| 📑[Tutorial](tutorial) | Contains several examples of generating database using RelGen |
+| 📦[Package](relgen) | Contains the code implementation of the RelGen project |
+| 📖[Docs](docs) | The documentation of this project |
 
 ## Installation
 RelGen requires Python version 3.7 or later. You can choose one of the following methods to install the relgen.
