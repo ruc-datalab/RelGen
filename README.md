@@ -120,7 +120,7 @@ from relgen.evaluator import Evaluator
 evaluator = Evaluator(data["census"], sampled_data["census"])
 ```
 
-Show comparison histogram of data distribution between real data and generated data.
+Show comparison histogram of data distribution between real data and generated data. Users can visualise whether the distributions on these key features are consistent, and thus assess the performance of the generated model and the quality of the generated data.
 ```python
 evaluator.eval_histogram(columns=["age", "sex", "relationship"])
 ```
@@ -129,7 +129,7 @@ evaluator.eval_histogram(columns=["age", "sex", "relationship"])
   <img src="asset/histogram.png" alt="RelGen v0.1">
 </p>
 
-Show comparison t-SNE plot of data distribution between real data and generated data.
+Show comparison t-SNE plot of data distribution between real data and generated data.The t-SNE plot helps the user to observe the overall structural similarity between the generated data and the real data, and to evaluate the effectiveness of the generated model.
 ```python
 evaluator.eval_tsne()
 ```
