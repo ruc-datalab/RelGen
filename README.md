@@ -10,8 +10,8 @@
 [![PyPi Latest Release](https://img.shields.io/pypi/v/relgen)](https://pypi.org/project/relgen/)
 [![License](https://img.shields.io/badge/License-Apache2.0-blue.svg)](./LICENSE)
 
-**RelGen** is the abbreviation of **Rel**ation **Gen**eration. This tool is used to generate relational data in databases. 
-Interestingly, the pronunciation of "Rel" closely resembles "Real," underscoring the fact that the relational data produced by RelGen is remarkably authentic and reliable. 
+**RelGen** is the abbreviation of **Rel**ation **Gen**eration. This tool is used to generate relational data in databases. RelGen is a powerful tool designed to generate relational data for use in databases. Interestingly, the pronunciation of "Rel" is quite similar to "Real," which subtly highlights the fact that the relational data produced by RelGen is remarkably authentic and reliable. This clever naming underscores the tool’s ability to create data that closely mirrors real-world datasets in terms of complexity, structure, and distribution.
+
 
 ## Overview
 
