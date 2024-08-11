@@ -54,12 +54,12 @@ pip install -r requirements.txt
 ```
 
 ## Quick-Start
-In this section, you will learn how to use RelGen package with a simple example. You will load a dataaset with RelGen, construct a model for data synthesis, train the model and generate data sample from it.
+In this section, you will learn how to use RelGen package with a simple example. You will load a dataset with RelGen, construct a model for data synthesis, train the model and generate data sample from it.
 
 ### Loading Dataset
 Load a demo dataset to get started. This dataset is a single table describing the census. You can find this data in [census](datasets/census/).
 
-Load metadata for the census dataset. 
+Load metadata for the census dataset. Metadata usually contains descriptive information about the dataset, such as field names, types, associations, etc., and is used to help better understand and process the data.
 ```python
 from relgen.data.metadata import Metadata
 
@@ -84,7 +84,7 @@ data = {
 > 
 > This data was extracted from the 1994 Census bureau database by Ronny Kohavi and Barry Becker (Data Mining and Visualization, Silicon Graphics). A set of reasonably clean records was extracted using the following conditions: ((AAGE>16) && (AGI>100) && (AFNLWGT>1) && (HRSWK>0)). The prediction task is to determine whether a person makes over $50K a year.
 
-Encapsulate the census dataset and process it.
+Load metadata and combine it with actual data created and processed the dataset in preparation for the rest of the process.
 ```python
 from relgen.data.dataset import Dataset
 
@@ -94,7 +94,7 @@ dataset.fit(data)
 
 ### Generating Data
 
-Create MADESynthesizer instances, train the synthesizer using the fit method, and learn data structures to generate similar relational data.
+Create the MADESynthesizer instance, train the synthesizer using the fit method, and learn data structures to generate similar relational data.
 ```python
 from relgen.synthesizer.arsynthesizer import MADESynthesizer
 
