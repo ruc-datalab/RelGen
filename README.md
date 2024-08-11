@@ -94,7 +94,7 @@ dataset.fit(data)
 
 ### Generating Data
 
-Create the MADESynthesizer instance, train the synthesizer using the fit method, and learn data structures to generate similar relational data.
+Next, we can create a RelGen synthesizer, which is an advanced tool specifically designed to generate relational data. This synthesizer works by analyzing and learning patterns from real datasets, capturing the intricate structures and distributions present in the original data. Once it has understood these patterns, it replicates them to create new, synthetic relational datasets. 
 ```python
 from relgen.synthesizer.arsynthesizer import MADESynthesizer
 
