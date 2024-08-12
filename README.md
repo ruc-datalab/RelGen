@@ -138,10 +138,10 @@ evaluator.eval_tsne()
 
 The code of Quick Start can be found in [Quick Start](QuickStart.ipynb).
 
-## More
+## Try More Examples
 You can try more examples in [tutorial](tutorial). If you have any question, please [contanct us](https://github.com/ruc-datalab/RelGen/issues). 
 
-## Cite
+## Cite Us
 If you find RelGen useful for your research or development, please cite the following paper: [Tabular data synthesis with generative adversarial networks: design space and optimizations](https://link.springer.com/article/10.1007/s00778-023-00807-y).
 
 ```bibtex
