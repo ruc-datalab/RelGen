@@ -17,7 +17,7 @@ RelGen is a Python library designed to generate real relational data for users.
 RelGen uses a variety of advanced deep generative models and algorithms to learn data distribution from real data and generate high-quality simulation data.RelGen can be applied to database system testing, data publishing and cross-domain data flow, as well as machine learning data augmentation.
 
 <p align="center">
-  <img src="asset/framework2.png" alt="RelGen v0.1" width="600">
+  <img src="asset/framework2.png" alt="RelGen v0.1" width="800">
   <br>
   <b>Figure 1: RelGen Overall Architecture</b>
 </p>
