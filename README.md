@@ -1,8 +1,8 @@
-<p align="center">
-  <img src="asset/logo1.png" alt="RelGen v0.1" width="500">
+<p align="left">
+  <img src="asset/logo1.png" alt="RelGen v0.1" width="400">
 </p>
 
-# RelGen
+# RelGen: Relational Data Generation
 
 [![Unit Tests](https://github.com/ruc-datalab/RelGen/actions/workflows/unit.yml/badge.svg)](https://github.com/ruc-datalab/RelGen/actions/workflows/unit.yml)
 [![E2E Tests](https://github.com/ruc-datalab/RelGen/actions/workflows/e2e.yml/badge.svg)](https://github.com/ruc-datalab/RelGen/actions/workflows/e2e.yml)
@@ -10,7 +10,7 @@
 [![PyPi Latest Release](https://img.shields.io/pypi/v/relgen)](https://pypi.org/project/relgen/)
 [![License](https://img.shields.io/badge/License-Apache2.0-blue.svg)](./LICENSE)
 
-**RelGen** is the abbreviation of **Rel**ation **Gen**eration. This tool is used to generate relational data in databases. RelGen is a powerful tool designed to generate relational data for use in databases. Interestingly, the pronunciation of "Rel" is quite similar to "Real," which subtly highlights the fact that the relational data produced by RelGen is remarkably authentic and reliable. 
+**RelGen** is the abbreviation of **Rel**ational Data **Gen**eration. This tool is used to generate relational data in databases. RelGen is a powerful tool designed to generate relational data for use in databases. Interestingly, the pronunciation of "Rel" is quite similar to "Real," which subtly highlights the fact that the relational data produced by RelGen is remarkably authentic and reliable. 
 
 
 ## Overview
