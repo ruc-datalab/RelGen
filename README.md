@@ -1,8 +1,6 @@
-<p align="left">
+<p align="center">
   <img src="asset/logo1.png" alt="RelGen v0.1" width="400">
 </p>
-
-# RelGen: Relational Data Generation
 
 [![Unit Tests](https://github.com/ruc-datalab/RelGen/actions/workflows/unit.yml/badge.svg)](https://github.com/ruc-datalab/RelGen/actions/workflows/unit.yml)
 [![E2E Tests](https://github.com/ruc-datalab/RelGen/actions/workflows/e2e.yml/badge.svg)](https://github.com/ruc-datalab/RelGen/actions/workflows/e2e.yml)
