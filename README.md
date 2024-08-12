@@ -1,5 +1,5 @@
-<p align="center">
-  <img src="asset/logo1.png" alt="RelGen v0.1" width="400">
+<p align="left">
+  <img src="asset/logo1.png" alt="RelGen v0.1" width="500">
 </p>
 
 [![Unit Tests](https://github.com/ruc-datalab/RelGen/actions/workflows/unit.yml/badge.svg)](https://github.com/ruc-datalab/RelGen/actions/workflows/unit.yml)
